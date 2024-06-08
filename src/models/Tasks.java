@@ -1,6 +1,5 @@
 package models;
 
-
     import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -15,17 +14,16 @@ import javax.persistence.Table;
     @Entity
     @NamedQueries({
         @NamedQuery(
-            name = "getAllMessages",
+            name = "getAllTasks",
             query = "SELECT m FROM Tasks AS m ORDER BY m.id DESC"
         )
     })
-    @Table(name = "tasks")
+    @Table(name = "tasklist")
     public class Tasks {
         @Id
         @Column(name = "id")
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Integer id;
-
 
 
         @Column(name = "content", length = 255, nullable = false)
