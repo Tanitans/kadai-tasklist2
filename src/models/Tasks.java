@@ -16,11 +16,11 @@ import javax.persistence.Table;
     @NamedQueries({
         @NamedQuery(
             name = "getAllMessages",
-            query = "SELECT m FROM tasks AS m ORDER BY m.id DESC"
+            query = "SELECT m FROM Tasks AS m ORDER BY m.id DESC"
         )
     })
-    @Table(name = "tasklist")
-    public class tasks {
+    @Table(name = "tasks")
+    public class Tasks {
         @Id
         @Column(name = "id")
         @GeneratedValue(strategy = GenerationType.IDENTITY)
